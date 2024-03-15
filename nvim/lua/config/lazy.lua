@@ -23,6 +23,9 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
     -- import/override with your plugins
     { import = "plugins" },
+
+    -- Add presence.nvim as a lazy-loaded plugin
+    { "andweeb/presence.nvim", disable = false },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
