@@ -14,9 +14,6 @@ return {
       opts.presets.lsp_doc_border = true
     end,
   },
-
-  --- Notification ui
-
   {
     "rcarriga/nvim-notify",
     opts = {
@@ -24,8 +21,38 @@ return {
     },
   },
 
-  --- Top bufferline that shows all the open tabs
+  -- {
+  -- "b0o/incline.nvim",
+  -- dependencies = { "craftzdog/solarised-osaka.nvim" },
+  -- event = "BufReadPre",
+  -- priority = 1200,
+  -- config = function()
+  -- local colors = require("solarized-osaka.colors").setup()
+  -- require("incline").setup({
+  -- highlight = {
+  -- groups = {
+  -- InclineNormal = {
+  -- guibg = colors.magenta500,
+  -- guifg = colors.base04,
+  -- },
+  -- InclineNormalNC = {
+  -- guifg = colors.violet500,
+  -- guibg = colors.base03,
+  -- },
+  -- },
+  -- },
+  -- window = { margin = { vertical = 0, horizontal = 1 } },
+  -- hide = {
+  -- cursorline = true,
+  -- },
+  -- render = function(props)
+  -- local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ":t")
+  -- end,
+  -- })
+  -- end,
+  -- },
 
+  -- buffer line
   {
     "akinsho/bufferline.nvim",
     event = "VeryLazy",
@@ -43,7 +70,7 @@ return {
     },
   },
 
-  --- Statusline
+  -- statusline
   {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -55,7 +82,6 @@ return {
     },
   },
 
-  --- Zenmode for distraction free coding, increases kitty font size
   {
     "folke/zen-mode.nvim",
     cmd = "ZenMode",
@@ -63,13 +89,13 @@ return {
       plugins = {
         gitsigns = true,
         tmux = true,
-        kitty = { enabled = true, font = "+2" },
+        kitty = { enabled = false, font = "+2" },
       },
     },
     keys = { { "<leader>z", "<cmd>ZenMode<cr>", desc = "Zen Mode" } },
   },
 
-  --- Animations
+  -- animations
   {
     "echasnovski/mini.animate",
     event = "VeryLazy",
@@ -80,7 +106,6 @@ return {
     end,
   },
 
-  -- frontui change
   {
     "nvimdev/dashboard-nvim",
     event = "VimEnter",
