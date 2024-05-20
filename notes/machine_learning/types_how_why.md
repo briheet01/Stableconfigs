@@ -1,3 +1,5 @@
+# Things to look into
+
 Online - Online data feeding is done.
 Batch - Is trained offline and then is put up. Also uses all the available data.
 Instance based and Model based
