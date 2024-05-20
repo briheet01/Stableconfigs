@@ -2,8 +2,8 @@
 
 Info from [This Book](https://powerunit-ju.com/wp-content/uploads/2021/04/Aurelien-Geron-Hands-On-Machine-Learning-with-Scikit-Learn-Keras-and-Tensorflow_-Concepts-Tools-and-Techniques-to-Build-Intelligent-Systems-OReilly-Media-2019.pdf)
 
-- new directory := export ML_PATH="$HOME/ml"
-- mkdir -p $ML_PATH
+- path := `export ML_PATH="$HOME/ml"`
+- new directory := `mkdir -p $ML_PATH`
 
 - going inside := `cd $ML_PATH`
 - new environment := `python3 -m venv env`
