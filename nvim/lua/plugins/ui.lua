@@ -50,7 +50,7 @@ return {
     event = "VeryLazy",
     opts = {
       options = {
-        thme = "purple",
+        -- theme = "purple",
       },
     },
   },
