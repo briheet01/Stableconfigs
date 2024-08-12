@@ -8,6 +8,8 @@ local opts = { noremap = true, silent = true }
 -- Split window
 keymap.set("n", "ss", ":split<Return>", opts)
 keymap.set("n", "sv", ":vsplit<Return>", opts)
+vim.keymap.set("n", "[d", vim.diagnostic.goto_next, { desc = "Goto the next diagnostic found in the file" })
+vim.keymap.set("n", "]d", vim.diagnostic.goto_prev, { desc = "Goto the prev diagnostic found in the file" })
 
 -- Diagnostics
 keymap.set("n", "<C-j>", function()
