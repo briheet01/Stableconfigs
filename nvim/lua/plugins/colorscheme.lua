@@ -10,18 +10,18 @@
 --   },
 -- }
 
-return {
-  {
-    "sainnhe/sonokai",
-    priority = 1000,
-    config = function()
-      vim.g.sonokai_transparent_background = "1"
-      vim.g.sonokai_enable_italic = "1"
-      vim.g.sonokai_style = "andromeda"
-      vim.cmd.colorscheme("sonokai")
-    end,
-  },
-}
+-- return {
+--   {
+--     "sainnhe/sonokai",
+--     priority = 1000,
+--     config = function()
+--       vim.g.sonokai_transparent_background = "1"
+--       vim.g.sonokai_enable_italic = "1"
+--       vim.g.sonokai_style = "andromeda"
+--       vim.cmd.colorscheme("sonokai")
+--     end,
+--   },
+-- }
 
 -- return {
 --   {
@@ -38,6 +38,19 @@ return {
 --     end,
 --   },
 -- }
+--
+return {
+  "AlexvZyl/nordic.nvim",
+  lazy = false,
+  priority = 1000,
+  config = function()
+    require("nordic").load({
+      transparent = {
+        bg = true,
+      },
+    })
+  end,
+}
 
 -- return {
 --   {
